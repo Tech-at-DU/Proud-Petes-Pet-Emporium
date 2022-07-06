@@ -1,17 +1,14 @@
----
-title: "Getting Started: Reading Code"
-slug: getting-started
----
+# Getting Started: Reading Code
 
 This tutorial will walk you through adding the some common advanced features to an Express.js server, such as pagination, adding payment gateways, and uploading files using S3.
 
-# Why Is This Important?
+## Why Is This Important?
 
 There's a lot of different concepts we're throwing at you in this tutorial. We want you to get practice at a base level with some of these concepts, as you'll absolutely be using some number of these (if not all of them!) throughout your career. If you work on anything payments related, you'll need to know how a payment gateway works. If you want to upload files in your web app at all (and who doesn't?), you'll need to know how to do that with some tool (in this case S3 and AWS). Do you want pages in your app at all?
 
 This isn't everything you need to know for each topic, but it'll give you a foundation to build off of so that when you get assigned that payment flow, or file upload feature, you'll have a solid baseline to begin building from!
 
-# Learning Outcomes
+## Learning Outcomes
 
 By the end of this tutorial, you should be able to add the following features to an Express.js server:
 
@@ -24,7 +21,7 @@ By the end of this tutorial, you should be able to add the following features to
  * Sending emails
  * Respond to JSON
 
-# Technical Planning
+## Technical Planning
 
 Here's how we're going to go about building out features in this tutorial:
 
@@ -37,14 +34,13 @@ Here's how we're going to go about building out features in this tutorial:
 1. Building Full-text Search
 1. Responding to JSON
 
-# Outside In Philosophy & Vaporware
+## Outside In Philosophy & Vaporware
 
 We're going to build this whole app from the outside-in, meaning each step, we're always going to build what the user sees (the **views** or **templates**) first. We can even populate these with some mock data using arrays. This first step is called building **Vaporware** and is an excellent pattern that will save you time and improve your client and stakeholder happiness.
 
-> [info]
-**Vaporware** is when you build out the templates with mock data, and it is a fantastic pattern to build navigable mock ups for clients and stakeholders before committing to building the logic and database relationships.
+> **Vaporware** is when you build out the templates with mock data, and it is a fantastic pattern to build navigable mock ups for clients and stakeholders before committing to building the logic and database relationships.
 
-# Commits with Git
+## Commits with Git
 
 As you go through this tutorial, you will also be making commits after completing milestones. **This is a requirement, you must make a commit whenever the tutorial prompts you**. This not only further enforces best practices for software engineering, but also will help you more easily figure out where a bug originated from if you break your progress up into discrete, trackable chunks.
 
@@ -52,22 +48,20 @@ When prompted to commit, you'll see a sample commit message. Feel free to use yo
 
 Lastly, the commit prompts in this tutorial should be the **minimum** amount of times you commit. If you want to do more commits, breaking your chunks into even smaller chunks, that is totally fine!
 
-# Getting Started - Cloning the Starter Project
+## Getting Started - Cloning the Starter Project
 
 You won't always be starting with a **Green Field Project** - a project where you start from scratch - sometimes you'll work on a project that has already started. In this tutorial we'll simulate that by starting with a relatively simple starter project.
 
-> [action]
-> Go to the [starter repo](https://github.com/Product-College-Labs/petes-pets) and clone the repo locally
->
+Go to the [starter repo](https://github.com/Product-College-Labs/petes-pets) and clone the repo locally
+
 ```bash
 $ git clone git@github.com:Make-School-Labs/petes-pets.git
 ```
 
 Now we need to change the remote so that you can commit/push/pull the changes you make to your own repo. **It is very important you do the below steps in order to get everything working properly.**
 
-> [action]
-> Go to GitHub and create an _empty_, public repository called REPO-NAME, and now associate it as a remote for your cloned starter code, and then push to it.
->
+Go to GitHub and create an _empty_, public repository called REPO-NAME, and now associate it as a remote for your cloned starter code, and then push to it.
+
 ```bash
 $ cd petes-pets
 # can grab the url from the "Clone or download" link on your repo page
@@ -81,31 +75,27 @@ Go to your repo on GitHub and make sure your previously empty repo is now full w
 
 Once you have finished the above, continue on to the next steps:
 
-> [action]
-> Install your dependencies
->
+Install your dependencies
+
 ```bash
 npm install
 ```
 
 Next you need to make sure  MongoDB is properly installed. We will be using this for our database!
-> [action]
->
-> Follow the [install instructions](https://zellwk.com/blog/install-mongodb/). **Pay attention to the Preparations (MacOS Catalina onwards) section!!**
->
-> You'll then need to run the following commands to make sure `mongod` is working correctly:
->
+
+Follow the [install instructions](https://zellwk.com/blog/install-mongodb/). **Pay attention to the Preparations (MacOS Catalina onwards) section!!**
+
+You'll then need to run the following commands to make sure `mongod` is working correctly:
+
 ```bash
 $ sudo mongod --dbpath /System/Volumes/Data/data/db
 $ alias mongod="sudo mongod --dbpath /System/Volumes/Data/data/db"
 ```
-> The alias is so that you don't have to type out the long command every time you want to start `mongod`
+The alias is so that you don't have to type out the long command every time you want to start `mongod`
 
 <!--  -->
 
-> [info]
->
-> Official instructions [here](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/), but we liked the above resource better since it specifies how to handle Catalina changes.
+Official instructions [here](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/), but we liked the above resource better since it specifies how to handle Catalina changes.
 
 Now there is just one more step to seed your database before running your server.
 
