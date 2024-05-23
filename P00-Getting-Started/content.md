@@ -52,11 +52,7 @@ Lastly, the commit prompts in this tutorial should be the **minimum** amount of 
 
 You won't always be starting with a **Green Field Project** - a project where you start from scratch - sometimes you'll work on a project that has already started. In this tutorial we'll simulate that by starting with a relatively simple starter project.
 
-Go to the [starter repo](https://github.com/Product-College-Labs/petes-pets) and clone the repo locally
-
-```bash
-$ git clone git@github.com:Make-School-Labs/petes-pets.git
-```
+Go to the [starter repo](https://github.com/Tech-at-DU/petes-pets) and clone the repo locally.
 
 Now we need to change the remote so that you can commit/push/pull the changes you make to your own repo. **It is very important you do the below steps in order to get everything working properly.**
 
