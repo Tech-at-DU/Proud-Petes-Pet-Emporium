@@ -10,7 +10,7 @@ slug: "send-emails"
 1. ~~Integrating payment gateways~~
 1. **Sending emails**
     1. **Install and configure the `nodemailer` and `nodemailer-mailgun-transport` modules.**
-    1. **Sign up for an account with [Mailgun]([https://www.mailgun.com](https://signup.mailgun.com/new/signup?utm_content=website-banner&utm_term=api&intcmp=GL-25-Mg-sg-rp-EN&plan_name=dev_free))**
+    1. **Sign up for an account with [Mailgun](https://signup.mailgun.com/new/signup?utm_content=website-banner&utm_term=api&intcmp=GL-25-Mg-sg-rp-EN&plan_name=dev_free)**
     1. **Add your email credentials to your `.env` file.**
     1. **Send a sample email**
     1. **Setup emails to send whenever a pet is sold.**
@@ -19,7 +19,7 @@ slug: "send-emails"
 
 Sending emails is a common requirement of any web service. And as you might expect, Express.js and Node.js makes it quite easy to send emails!
 
-You might use a gmail account for a minimum viable product, but gmail will only let you send ~500 emails per day. At that point you'll want a scalable option. [Mailgun](https://www.mailgun.com/) to the rescue!
+You might use a gmail account for a minimum viable product, but gmail will only let you send ~500 emails per day. At that point you'll want a scalable option. [Mailgun](https://signup.mailgun.com/new/signup?utm_content=website-banner&utm_term=api&intcmp=GL-25-Mg-sg-rp-EN&plan_name=dev_free) to the rescue!
 
 Then we'll need to extend `nodemailer` with the [nodemailer-mailgun-transport](https://github.com/orliesaurus/nodemailer-mailgun-transport) because `nodemailer-mailgun-transport` uses `consolidate.js` under the hood to add support for templating engines.
 
@@ -32,7 +32,7 @@ Lastly, we're going to try to make this code more modular. Rather than throwing 
 First off we'll make a plan of the outside-in, step-by-step process to get emails firing off.
 
 1. Install and configure the `nodemailer` and `nodemailer-mailgun-transport` modules.
-1. Sign up for an account with [Mailgun]([https://www.mailgun.com](https://signup.mailgun.com/new/signup?utm_content=website-banner&utm_term=api&intcmp=GL-25-Mg-sg-rp-EN&plan_name=dev_free))
+1. Sign up for an account with [Mailgun](https://signup.mailgun.com/new/signup?utm_content=website-banner&utm_term=api&intcmp=GL-25-Mg-sg-rp-EN&plan_name=dev_free)
 1. Add your email credentials to your `.env` file.
 1. Send a sample email
 1. Setup emails to send whenever a pet is sold.
