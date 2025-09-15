@@ -10,7 +10,7 @@ slug: "send-emails"
 1. ~~Integrating payment gateways~~
 1. **Sending emails**
     1. **Install and configure the `nodemailer` and `nodemailer-mailgun-transport` modules.**
-    1. **Sign up for an account with [Mailgun](https://www.mailgun.com)**
+    1. **Sign up for an account with [Mailgun]([https://www.mailgun.com](https://signup.mailgun.com/new/signup?utm_content=website-banner&utm_term=api&intcmp=GL-25-Mg-sg-rp-EN&plan_name=dev_free))**
     1. **Add your email credentials to your `.env` file.**
     1. **Send a sample email**
     1. **Setup emails to send whenever a pet is sold.**
@@ -32,12 +32,12 @@ Lastly, we're going to try to make this code more modular. Rather than throwing 
 First off we'll make a plan of the outside-in, step-by-step process to get emails firing off.
 
 1. Install and configure the `nodemailer` and `nodemailer-mailgun-transport` modules.
-1. Sign up for an account with [Mailgun](https://www.mailgun.com)
+1. Sign up for an account with [Mailgun]([https://www.mailgun.com](https://signup.mailgun.com/new/signup?utm_content=website-banner&utm_term=api&intcmp=GL-25-Mg-sg-rp-EN&plan_name=dev_free))
 1. Add your email credentials to your `.env` file.
 1. Send a sample email
 1. Setup emails to send whenever a pet is sold.
 
-**IMPORTANT NOTE:** You will need to provide a credit card. As of 11/2/2020, the Flex Trial allows you to send 5000 emails per month for 3 months for free. After that, it will charge you for any messages you send at a rate of $0.80/1,000 messages. **Please be aware of this should you send emails with Mailgun 3 months after you sign up today**
+<!-- **IMPORTANT NOTE:** You will need to provide a credit card. As of 11/2/2020, the Flex Trial allows you to send 5000 emails per month for 3 months for free. After that, it will charge you for any messages you send at a rate of $0.80/1,000 messages. **Please be aware of this should you send emails with Mailgun 3 months after you sign up today** -->
 
 > [action]
 >
@@ -78,7 +78,7 @@ const nodemailerMailgun = nodemailer.createTransport(mg(auth));
 
 # Make a Mailgun Account & Add Credentials
 
-1. Head over to [Mailgun](https://www.mailgun.com) and create an account by clicking the **Start Sending** button
+1. Head over to [Mailgun](https://signup.mailgun.com/new/signup?utm_content=website-banner&utm_term=api&intcmp=GL-25-Mg-sg-rp-EN&plan_name=dev_free) and create an account by clicking the **Start Sending** button. Make sure to use the provided link in order to access the free trial without entering any credit card information.
 1. Fill out the form with your information. Don't worry about the credit card number, you won't go over 10,000 emails
 1. Select **Flex Trial**, then click **Create Account**
 ![MG FLEX TRIAL](assets/mg-flex-trial.png)
