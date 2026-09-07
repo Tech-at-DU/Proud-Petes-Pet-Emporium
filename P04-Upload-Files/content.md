@@ -52,6 +52,17 @@ Please reference the [AWS Documentation](https://docs.aws.amazon.com/index.html#
 1. On the *Contact Information* page, select `Personal` when asked for account type and fill out the required information.
 ![AWS Account Type](assets/aws-contact-info.png)
 1. Enter your credit card information. **Don't worry, you won't be charged as long as you don't exceed the [AWS Free Tier Limits](https://aws.amazon.com/free/?all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc&awsf.Free%20Tier%20Types=tier%23always-free) (which you shouldn't, since this is just a small, non-public web app)**
+    > [info]
+    >
+    > **Stuck on the payment step?** AWS account signup can fail when the card/bank form won't accept input, or when you see errors like "change network" or "couldn't add bank account." Try these in order:
+    >
+    > 1. Use a **debit or credit card** (Visa/Mastercard) instead of a bank account, and make sure the billing address matches what your bank has on file.
+    > 1. Ask your bank to allow **international / online authorization charges** — AWS places a small temporary hold and then drops it.
+    > 1. Try an **incognito window**, or a different network than campus wifi (a phone hotspot often works).
+    > 1. If you're still blocked, open an [AWS Support](https://console.aws.amazon.com/support/) case: **Account and billing** → **Account** → **Account Activation**. You can do this even before your account is fully active.
+    >
+    > Still stuck after that? Let your instructor know — we can walk through signup together in class.
+
 1. Fill out the `Confirm your identity` form
 1. After confirming your account, make sure to select the **Basic Plan**, which is the **Free** one. **If you don't choose Basic, your credit card you submitted will be charged**.
 ![AWS Support Plan](assets/aws-support-plan.png)
