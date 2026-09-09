@@ -96,20 +96,8 @@ AWS_SECRET_ACCESS_KEY=SecRETAcCeSskEY
 
 Once you're done with this, go back to your browser and select **Close** on the Success screen.
 
-## Backup Plan for Access Keys
-If for whatever reason those keys don't work, you can try making a key for your AWS root account instead. Follow these steps as a backup plan:
-
-1. From the IAM Dashboard, select **Enable MFA** and then press **Activate MFA**
-![AWS IAM DASHBOARD](assets/aws-iam-dashboard-mfa.png)
-![AWS CONSOLE MFA](assets/aws-console-mfa-2020.png)
-1. On the popup, select the **Virtual MFA device** option, and click **Continue**
-1. Follow the steps for setting up a Virtual MFA on your device. We recommend using [Google Authenticator](https://support.google.com/accounts/answer/1066447?co=GENIE.Platform%3DAndroid&hl=en), it is supported on Android and iOS. **NOTE:** When it asks you to type in two seuqential MFA codes, type the first one you see on the app, wait for it to expire, then type in the next one. Those are your two codes!
-1. Select **Access keys (access key ID and secret access key)** and click the **Create New Access Key** button. Again noting this isn't the ideal way to do it, but it is a backup plan
-![AWS CREATE KEY](assets/aws-mfa-create-key.png)
-1. Click on **Show Access Key** in the popup
-![AWS ROOT KEY MODAL](assets/aws-root-key.png)
-
-You should now have the root **Access Key ID** and a **Secret access key**. Try using those in your `.env` file if your user ones don't work.
+> [!NOTE] Instructor
+> Never create AWS **root** access keys. If the IAM user keys fail, debug IAM policy, region, and bucket name with the instructor — do not fall back to the root account.
 
 # Make a new "bucket" in AWS S3
 
