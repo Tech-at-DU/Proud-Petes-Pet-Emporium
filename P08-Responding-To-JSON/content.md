@@ -78,7 +78,6 @@ If you are building a large, funded, revenue-generating web server, then you wil
 The first step is to namespace your API routes with the preface `/api/` so all resourceful routes that go to your API controllers always are prefaced with `/api/`.
 
 ```
-<!-- For example -->
 show - GET - /api/pets/:id
 create - POST - /api/pets
 update - PUT - /api/pets/:id
@@ -100,5 +99,5 @@ $ git commit -m 'Implemented responding to JSON'
 $ git push
 ```
 
-**Congrats on completing the multi-faceted store that is Proud Pete's Pet Emporium!** As you go through this BEW course, think about how you can tie the concepts you learned in this tutorial to the big ideas and concepts in the course itself.
+**Congrats on completing the multi-faceted store that is Proud Pete's Pet Emporium!** As you go through this course, think about how you can tie the concepts you learned in this tutorial to the big ideas and concepts in the course itself.
 
