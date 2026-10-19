@@ -214,12 +214,12 @@ Let's add a hidden Bootstrap 4 alert module to our layout template that we we'll
 Now we can manipulate this alert via JavaScript when there is an error (or a success!);
 
 >[action]
-> Replace the `catch` code in your `catch` block in `/public/scripts.js` with the following:
+> Replace the `catch` code in your `catch` block in `/public/javascripts/scripts.js` with the following:
 >
 ```js
 axios.post('/pets', pet)
   .then(function (response) {
-    window.location.replace(`/pets/${response.data._id}`);
+    window.location.replace(`/pets/${response.data.pet._id}`);
   })
   // New Catch Code
   .catch(function (error) {
@@ -236,7 +236,7 @@ Now that we see the alert, can you use the [setTimeout(callback, milliseconds)](
 
 > [solution]
 >
-> Add the following at the end of the `catch` block  in `/public/scripts.js`:
+> Add the following at the end of the `catch` block  in `/public/javascripts/scripts.js`:
 >
 ```js
 setTimeout(() => {

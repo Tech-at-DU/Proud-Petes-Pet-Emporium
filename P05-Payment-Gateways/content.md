@@ -93,7 +93,7 @@ What should replace `/your-server-side-code`? What should we name that route? Th
 Let's use `POST` verb, but we're creating something associated with a Pet. So probably our best bet is `/pets/:id/purchase`.
 
 >[action]
-> Update the `action` on the purchase form in `/views/pet-show.pug` to the following:
+> Update the `action` on the purchase form in `/views/pets-show.pug` to the following:
 >
 ```pug
 form(action=`/pets/${pet._id}/purchase`, method='POST')
@@ -219,8 +219,8 @@ const PetSchema = new Schema({
   name: { type: String, required: true }
   , birthday: {type: String, required: true }
   , species: { type: String, required: true }
-  , picUrl: { type: String, required: true }
-  , picUrlSq: { type: String, required: true }
+  , picUrl: { type: String }
+  , picUrlSq: { type: String }
   , avatarUrl: { type: String, required: true }
   , favoriteFood: { type: String, required: true }
   , description: { type: String, minlength: 140, required: true }
@@ -234,12 +234,12 @@ Now let's update our views to include `price`:
 >[action]
 > Update the `form` on both `/views/pets-new.pug` and `/views/pets-edit.pug` to include a new `.form-group` object for  `price`:
 >
-```js
+```pug
 >
 ...
 .form-group
   label Price*
-  textarea.form-control(name="price" required type="number")
+  textarea.form-control(name="price" required)
 ```
 
 Next we'll update our `show` view to include the pet's price in the Stripe modal, as well as putting in a hidden `input` to pass the pet's `id` to the controller, which we'll use in a bit:
@@ -247,7 +247,7 @@ Next we'll update our `show` view to include the pet's price in the Stripe modal
 > [action]
 > Update `/views/pets-show.pug` to use the pet's price and send the pet's `id` to the controller
 >
-```js
+```pug
 form(action=`/pets/${pet._id}/purchase`, method='POST')
   script.stripe-button(src='https://checkout.stripe.com/checkout.js',
   data-key=PUBLIC_STRIPE_API_KEY,
@@ -326,4 +326,4 @@ If you're itching for more, check out the below challenge:
 >
 > 3) If a pet is purchased, do not show the Checkout button.
 >
-> 4) Checkout.js is a great tool from Stripe that does a lot of the heavy lifting for you. If you want more customization though, you'll want to use [Stripe Elements](https://stripe.com/payments/elements). Note that you'll have to implement a lot of the payment flow work if you choose to use Elements. Check out the [quick start guide](https://stripe.com/docs/stripe-js/elements/quickstart) and some [examples](https://stripe.dev/elements-examples/) to get started!
+> 4) Checkout.js is a great tool from Stripe that does a lot of the heavy lifting for you. If you want more customization though, you'll want to use [Stripe Elements](https://stripe.com/payments/elements). Note that you'll have to implement a lot of the payment flow work if you choose to use Elements. Check out the [quick start guide](https://docs.stripe.com/payments/quickstart) and some [examples](https://stripe.dev/elements-examples/) to get started!
