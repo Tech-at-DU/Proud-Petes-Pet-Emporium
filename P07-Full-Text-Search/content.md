@@ -28,8 +28,8 @@ Before we add an index to our model, let's make sure we're clear of indexes (sin
 >
 ```bash
 $ mongo
-$ use petes-pets
-$ db.pets.dropIndex('animal_text_color_text_pattern_text_size_text');
+$ use local
+$ db.pets.dropIndexes();
 ```
 
 If you run into a Mongo error where it says the index "already exists with different options", you will have to run this and delete the index that's causing problems before assigning a new one.
