@@ -89,8 +89,6 @@ $ alias mongod="sudo mongod --dbpath /System/Volumes/Data/data/db"
 ```
 The alias is so that you don't have to type out the long command every time you want to start `mongod`
 
-<!--  -->
-
 Official instructions [here](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/), but we liked the above resource better since it specifies how to handle Catalina changes.
 
 Now there is just one more step to seed your database before running your server.
@@ -119,8 +117,6 @@ module.exports = {
 $ seed
 $ nodemon
 ```
-
-<!--  -->
 
 > [info]
 >
